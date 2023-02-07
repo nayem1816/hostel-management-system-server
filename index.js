@@ -9,6 +9,10 @@ mongoose.connect(process.env.DATABASE).then(() => {
 
 const port = process.env.PORT || 5000;
 
+app.get('/', (req, res) => {
+    res.send('Route is working');
+});
+
 app.listen(port, () => {
     console.log(`Server is running at http://localhost:${port}`);
 });
